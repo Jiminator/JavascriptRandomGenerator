@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", function(){
   // learned from https://developer.mozilla.org/en-US/docs/Web/API/Element/keyup_event
   userInput.addEventListener("keyup", function(event) {
     if (event.key === "Enter") {
-      generateCuisine();
+      generate();
     }
   });
 
-function generateCuisine(){
+function generate(){
   var cuisines = ["Italian", "Mexican", "Chinese", "Japanese", "Indian", "Thai", "Greek", "French", "Spanish", "Korean", "Vietnamese"];
   var input = userInput.value;
   var cuisineIndex = Math.floor(Math.random()*cuisines.length);
