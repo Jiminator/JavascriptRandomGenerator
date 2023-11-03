@@ -11,18 +11,18 @@ document.addEventListener("DOMContentLoaded", function(){
 
 function generateCuisine(){
   var cuisines = ["Italian", "Mexican", "Chinese", "Japanese", "Indian", "Thai", "Greek", "French", "Spanish", "Korean", "Vietnamese"];
-  var currentInputText = userInput.value;
-  var randomCuisineIndex = Math.floor(Math.random()*cuisines.length);
-  output.innerText = currentInputText + ", the cuisine you will eat today is " + cuisines[randomCuisineIndex] + ".";
+  var input = userInput.value;
+  var cuisineIndex = Math.floor(Math.random()*cuisines.length);
+  output.innerText = input + ", the cuisine you will eat today is " + cuisines[cuisineIndex] + ".";
   restyle();
 }
 
 function restyle() {
-  var randomRed = Math.random() * 255;
-  var randomGreen = Math.random() * 255;
-  var randomBlue = Math.random() * 255;
-  var outputColorString = "rgb(" + randomRed + "," + randomGreen + "," + randomBlue + ")";
-  output.style.color = outputColorString;
+  var red = Math.random() * 255;
+  var green = Math.random() * 255;
+  var blue = Math.random() * 255;
+  var randomColor = "rgb(" + red + "," + green + "," + blue + ")";
+  output.style.color = randomColor;
   
   var randomFontSize = Math.floor(Math.random() * 30) + 10;
   output.style.fontSize = randomFontSize + "px";
